@@ -5,7 +5,7 @@ import CustomInputSearch from "./CustomSearchBtn/CustomInputSearch";
 import Image from "next/image";
 import cart from "@/app/assets/imgs/Cart1.png";
 import user from "@/app/assets/imgs/user.png";
-import menuIcon from '@/app/assets/svgs/menuIcon.svg'
+import menuIcon from "@/app/assets/svgs/menuIcon.svg";
 import useCheckIsMobile from "@/app/hooks/useCheckIsMobile";
 const NotLoggedInNav = () => {
   const isMobile = useCheckIsMobile();
@@ -31,8 +31,7 @@ const NotLoggedInNav = () => {
             )}
           </div>
           <div>
-          < Image src={menuIcon} alt="Menu icon" width={25}/>
-
+            <Image src={menuIcon} alt="Menu icon" width={25} />
           </div>
         </div>
       ) : (

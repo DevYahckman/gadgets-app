@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'deepBlack':'#000000',
+        'infinityWhite':'#FAFAFA'
       },
     },
   },
