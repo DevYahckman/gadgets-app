@@ -22,8 +22,8 @@ const Banner = () => {
   ];
 
   return (
-    <div className="py-5 grid grid-cols-4 gap-10   ">
-      <div className=" border-r h-full">
+    <div className="md:py-5 md:grid md:grid-cols-4 gap-10   ">
+      <div className=" border-r hidden md:block h-full">
         {sideNavData.map((item: SideNaveProp) => (
           <Link
             key={item.name}
@@ -34,8 +34,8 @@ const Banner = () => {
           </Link>
         ))}
       </div>
-      <div className=" col-span-3  h-full ">
-        <div className="grid bg-deepBlack h-full py-10 px-20  grid-cols-2">
+      <div className=" md:col-span-3  h-full ">
+        <div className="  md:grid bg-deepBlack h-full p-5 md:py-10 md:px-20  grid-cols-2">
           <div className=" items-center text-infinityWhite  px-9 ">
             <p className=" flex items-center">
               <Image src={appleImage} alt="" className="mr-3" /> iPhone 14
