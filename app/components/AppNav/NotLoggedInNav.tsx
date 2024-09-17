@@ -1,13 +1,25 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import CustomInputSearch from "./CustomSearchBtn/CustomInputSearch";
 import Image from "next/image";
 import cart from "@/app/assets/imgs/Cart1.png";
 import user from "@/app/assets/imgs/user.png";
 import menuIcon from "@/app/assets/svgs/menuIcon.svg";
 import useCheckIsMobile from "@/app/hooks/useCheckIsMobile";
+import Drawer from "react-modern-drawer";
+
+//import styles 👇
+import "react-modern-drawer/dist/index.css";
+
+
 const NotLoggedInNav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDrawer = () => {
+    setIsOpen((prevState) => !prevState);
+  };
+
+  
   const isMobile = useCheckIsMobile();
   const loggedIn = true;
   return (
@@ -31,7 +43,20 @@ const NotLoggedInNav = () => {
             )}
           </div>
           <div>
-            <Image src={menuIcon} alt="Menu icon" width={25} />
+            <Image
+              src={menuIcon}
+              onClick={toggleDrawer}
+              alt="Menu icon"
+              width={25}
+            />
+            <Drawer
+              open={isOpen}
+              onClose={toggleDrawer}
+              direction="right"
+              className="bla bla bla"
+            >
+              <div>Hello World</div>
+            </Drawer>
           </div>
         </div>
       ) : (

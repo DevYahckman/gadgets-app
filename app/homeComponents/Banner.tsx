@@ -4,6 +4,7 @@ import hero from "@/app/assets/imgs/hero.png";
 import appleImage from "@/app/assets/imgs/appleLogo.png";
 import arrow from "@/app/assets/imgs/arrowRight.png";
 import Image from "next/image";
+
 interface SideNaveProp {
   name: string;
 }
